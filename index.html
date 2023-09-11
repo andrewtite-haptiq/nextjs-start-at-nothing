@@ -12,17 +12,24 @@
         <script type="text/jsx">
             const app = document.getElementById('app');
 
-            // This is a React component called Header that returns a h1 element.
-            // The name of the component must start with a capital letter to distinguish it from regular JS/HTML tags.
-            // The component is rendered to the DOM using ReactDOM.render().
-            function Header() {
-                return <h1>Develop. Preview. Ship.</h1>;
+            function Header({ title }) {
+                return <h1>{ title ?? 'Default Title' }</h1>;
             }
 
             function HomePage() {
+              const names = ['Andrew Tite', 'Ankit Sarkar', 'Swapnil Paril'];
+
               return <div>
                 <p>Nesting the Header component inside the HomePage component.</p>
                 <Header/>
+                <Header title={"React"}/>
+                <Header title={"A New Title"}/>
+                <hr/>
+                <ul>
+                  {names.map((name) => (
+                    <li key={name}>{name}</li>
+                  ))}
+                </ul>
               </div>
             }
 
