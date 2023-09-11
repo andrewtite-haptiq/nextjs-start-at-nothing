@@ -1,1 +1,4 @@
 .idea/*
+.next/*
+*.lock
+node_modules/*
