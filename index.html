@@ -17,7 +17,12 @@
             }
 
             function HomePage() {
+              const [likes, setLikes] = React.useState(0);
               const names = ['Andrew Tite', 'Ankit Sarkar', 'Swapnil Paril'];
+
+              function handleClick() {
+                setLikes(likes + 1);
+              }
 
               return <div>
                 <p>Nesting the Header component inside the HomePage component.</p>
@@ -30,6 +35,10 @@
                     <li key={name}>{name}</li>
                   ))}
                 </ul>
+                <hr/>
+                <button onClick={handleClick}>
+                  Like ({likes})
+                </button>
               </div>
             }
 
