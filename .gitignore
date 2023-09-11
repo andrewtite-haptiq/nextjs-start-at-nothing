@@ -1,1 +1,23 @@
+# NPM and Yarn
+*.lock
+
+# Next.js
+.next/*
+
+# JetBrains
 .idea/*
+
+# Visual Studio Code
+.vscode/*
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Node.js
+node_modules/
+
+# Build folder
+build/
