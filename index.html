@@ -11,9 +11,23 @@
         <!-- using type="text/jsx" to tell the browser that the script is using JSX syntax -->
         <script type="text/jsx">
             const app = document.getElementById('app');
-            // The code below is using JSX syntax, which is not supported by browsers,
-            // so we need to use a transpiler like Babel.
-            ReactDOM.render(<h1>Develop. Preview. Ship.</h1>, app);
+
+            // This is a React component called Header that returns a h1 element.
+            // The name of the component must start with a capital letter to distinguish it from regular JS/HTML tags.
+            // The component is rendered to the DOM using ReactDOM.render().
+            function Header() {
+                return <h1>Develop. Preview. Ship.</h1>;
+            }
+
+            function HomePage() {
+              return <div>
+                <p>Nesting the Header component inside the HomePage component.</p>
+                <Header/>
+              </div>
+            }
+
+            // Render the Header component to the DOM
+            ReactDOM.render(<HomePage/>, app);
         </script>
     </body>
 </html>
